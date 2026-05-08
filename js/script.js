@@ -1,4 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const burger = document.querySelector(".burger");
+    const bar = document.querySelector(".bar");
+
+    if (burger && bar) {
+
+        burger.addEventListener("click", () => {
+
+            burger.classList.toggle("active");
+            bar.classList.toggle("active");
+
+            document.body.classList.toggle("menu-open");
+        });
+
+    }
     const sliderLent = document.querySelector(".presentation__slider-lent");
     const slides = document.querySelectorAll(".presentation__slider-image");
     const dotsContainer = document.querySelector(".presentation__slides-viever");
